@@ -1,0 +1,164 @@
+{
+  "posts": [
+    {
+      "id": "7500a70f-5048-4131-9737-ac52debdb74d",
+      "title": "Ohio Man Steals 712 Bitcoin From Brother, Sentenced to Prison",
+      "content": "Gary James Harmon will spend four years in prison after stealing crypto assets that law enforcement tried to seize from his brother.",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC"]
+    },
+    {
+      "id": "d0d87eaf-355e-42be-8748-59a1e0fad4fc",
+      "title": "Proof’s Kevin Rose on Building in the NFT Bear Market: ‘Holy Shit Has It Been Tough’",
+      "content": "One year after the Moonbirds NFT drop, Rose discusses Proof’s renewed art focus and the “weird dynamic” of running Web3 projects.",
+      "language": "en",
+      "type": "news",
+      "currencies": ["ETH"]
+    },
+    {
+      "id": "587634d6-b086-4730-911d-11348919a9b1",
+      "title": "Bhutan’s Bitcoin Boom: How the Himalayan Kingdom is Harnessing Hydropower for Crypto Mining",
+      "content": "Beneath the towering peaks of the Himalayas, Bhutan, a small kingdom known for measuring Gross National Happiness, hides a tech-driven secret: a thriving Bitcoin mining operation. In an article by Forbes (published earlier today) titled “The Kingdom Of Bhutan Has Been Quietly Mining Bitcoin For Years,” it was revealed that Bhutan has been using its […]",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC"]
+    },
+    {
+      "id": "2d13a26d-2a7e-4646-8334-d3d626738ea7",
+      "title": "Legendary Tech Investor Tim Draper Tells the Story of How He and His Sons Got Into Crypto",
+      "content": "American venture capital investor Tim Draper recently explained how he and his family got into the world of cryptocurrencies. According to Draper University’s website, Tim Draper is a leading supporter and spokesperson for entrepreneurs worldwide, renowned for his expertise in Bitcoin, Blockchain, ICOs, and cryptocurrencies, having won the Bitcoin US Marshall’s auction in 2014, invested […]",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC"]
+    },
+    {
+      "id": "438d4af1-3818-4184-8e0d-eeb9416b95dc",
+      "title": "Over $124,700,000,000 in Bitcoin (BTC) Is Now Ancient, According to Analytics Firm Glassnode",
+      "content": "Nearly $125 billion worth of Bitcoin (BTC) are now considered “ancient,” or untouched for at least seven years, according to top blockchain analytics firm Glassnode. Glassnode says that in all of Bitcoin’s history, only 8.3% of all coins that become ancient have ever been spent. Of the BTC that remain ancient, Glassnode says they could […]",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC"]
+    },
+    {
+      "id": "a29e332c-0e8b-4737-8ad4-01fd928716bd",
+      "title": "Bitcoin Transactions Soar as Ordinals Barrel Past 2.5 Million, Notch Daily Record",
+      "content": "The bump in inscriptions comes as text-based content solidifies its dominance on Ordinals.",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC"]
+    },
+    {
+      "id": "e03f6e83-3d97-4709-ad2b-3f5f959b1203",
+      "title": "Bitcoin Price Prediction as Pumps Up 7% in 7 Days – Where is BTC Heading Next?",
+      "content": "In the past week, Bitcoin's price has experienced an impressive 7% increase, raising questions about the cryptocurrency's future trajectory. As investors and market analysts eagerly assess the factors driving this surge, many are left wondering where Bitcoin is heading next and what potential obstacles it may face along the way....\nRead More: Bitcoin Price Prediction as Pumps Up 7% in 7...",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC"]
+    },
+    {
+      "id": "b1f6e7e7-eab4-40d0-a409-bb2278d2b447",
+      "title": "Shiba Inu (SHIB) and Aptos (APT) price outlook as Bitcoin (BTC) tests resistance near $30k",
+      "content": "Bitcoin’s dip below $30,000 and subsequent retest of resistance above$29k highlights the past week’s top coins outlook. Shiba Inu (SHIB) price is below its 50 and 200 MA but analysts are bullish on SHIB given overall sentiment and network growth. Aptos (APT) price has formed a massive bull flag pattern that could see APT explode […]",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC", "SHIB", "APT"]
+    },
+    {
+      "id": "b7e7b911-3357-4c0b-9f86-1d9f8303582b",
+      "title": "Interview: Kevin Rose on the 'Weird Dynamic' of Building an NFT Project",
+      "content": "Proof co-founder and CEO Kevin Rose chats with Decrypt Culture Editor Andrew Hayward during NFT NYC 2023 to discuss his startup's reaffirmed focus on digital art and collectors, the challenges of building in the NFT market, and what he's learned in the last year since the buzzy Moonbirds drop.",
+      "language": "en",
+      "type": "news",
+      "currencies": []
+    },
+    {
+      "id": "700539f8-8000-4fa6-8108-0484159ef51b",
+      "title": "$1,400,000,000,000 Asset Manager Franklin Templeton Launches New Fund on Polygon (MATIC)",
+      "content": "Investment titan Franklin Templeton says that its blockchain-run mutual fund is now supported on the Ethereum (ETH) layer-2 scaling solution Polygon (MATIC). The $1.4 trillion asset manager’s Franklin OnChain U.S. Government Money Fund (FOBXX) is the first US-registered mutual fund to use a public blockchain to execute transactions and record share ownership.  The fund, which […]",
+      "language": "en",
+      "type": "news",
+      "currencies": ["ETH", "MATIC"]
+    },
+    {
+      "id": "7ffd17d7-7fce-4c03-bf32-8666b6f389f9",
+      "title": "Litecoin price prediction: can bulls pick up new momentum for LTC?",
+      "content": "Litecoin price traded above $90 on Sunday, with LTC hitting intraday highs of $91.60. While price has rejected twice above $100, the area remains a key target for bulls as Bitcoin retests the $30k level. If it breaks above the hurdle, fresh momentum heading into the Litecoin halving in August could catapult LTC price towards […]",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC", "LTC"]
+    },
+    {
+      "id": "24a687d8-c303-4219-ab9e-3968126e015e",
+      "title": "How Bored Ape Creator Yuga Labs Plans to Get to the 'Otherside'",
+      "content": "After the Otherside Second Trip playtest, Yuga execs reflect on building in public and how they aim to bring the Web3 metaverse game to life.",
+      "language": "en",
+      "type": "news",
+      "currencies": ["ETH"]
+    },
+    {
+      "id": "57258cc3-af17-47a5-906b-8255415fac73",
+      "title": "Ripple’s Q1 2023 XRP Markets Report Shows XRP’s Super Bullish Trajectory Despite SEC Lawsuit",
+      "content": "",
+      "language": "en",
+      "type": "news",
+      "currencies": ["XRP"]
+    },
+    {
+      "id": "00a506a7-208c-48e9-bb2d-0f8bbb23e26b",
+      "title": "Casper price prediction: what next for CSPR after 60% rally in April?",
+      "content": "Casper Network price rose over 60% in April, hitting a high of $0.060. CSPR traded at around $0.059 at the time of writing, about 6% up in the past 24 hours. While CSPR price is above key support level, here’s the price outlook for Casper Network going into May. Casper Network price rose more than […]",
+      "language": "en",
+      "type": "news",
+      "currencies": ["ETH", "CSPR"]
+    },
+    {
+      "id": "77150cac-c72b-45e6-92f5-4f35397a3f3d",
+      "title": "This Week on Crypto Twitter: Tornado Cash Dev Alex Pertsev Returns! CZ Says He’s Not That Rich",
+      "content": "Industry lawyers and advisors made a killing from the horrorshow that was “Crypto Winter” 2022.",
+      "language": "en",
+      "type": "news",
+      "currencies": []
+    },
+    {
+      "id": "df5c4c37-c401-43d7-8bec-689a0bd24053",
+      "title": "Bitcoin futures outweigh spots: Gauging the soaring BTC volatility, trading activity",
+      "content": "",
+      "language": "en",
+      "type": "news",
+      "currencies": ["BTC"]
+    },
+    {
+      "id": "cea4ac61-16e4-4857-8d00-9581ba32619a",
+      "title": "Crypto Secret: Bear Markets DO NOT MATTER",
+      "content": "",
+      "language": "en",
+      "type": "media",
+      "currencies": []
+    },
+    {
+      "id": "1604d05f-26a3-400e-b9b4-c081cc7220ca",
+      "title": "No Bear Market for Crypto Talent: These 10 Companies Are Hiring Now",
+      "content": "Many companies are on the hunt for people who are fired up, all-in and ready to get their hands dirty to reignite the crypto and blockchain industry",
+      "language": "en",
+      "type": "news",
+      "currencies": []
+    },
+    {
+      "id": "ab54c319-957c-4daa-9baf-665362dac99f",
+      "title": "PEPE Takes the Meme Coin Crown, Leaving Dogecoin and Shiba Inu in the Rearview",
+      "content": "PEPE has emerged as one of the most talked about meme coins of the moment, and has witnessed a 1198% price increase since its launch.",
+      "language": "en",
+      "type": "news",
+      "currencies": ["DOGE", "SHIB"]
+    },
+    {
+      "id": "a25f0d15-b4c8-4406-93d2-8d78b0590493",
+      "title": "Fed Triggering Terrible Global Calamity As Nations Back Away From US Bonds: Billionaire Ray Dalio",
+      "content": "Billionaire Ray Dalio warns that other countries are no longer lining up to purchase government debt after witnessing the crisis in the US banking industry. In a new interview with YouTuber Chris Williamson, Dalio explains why the collapse of Silicon Valley Bank is just a symptom of a much larger problem instigated by the Federal […]",
+      "language": "en",
+      "type": "news",
+      "currencies": []
+    }
+  ]
+}
