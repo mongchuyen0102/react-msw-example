@@ -1,7 +1,5 @@
 import { rest } from 'msw';
-import mockCategories from './data/categories.json';
-import mockPosts from './data/posts.json';
-import mockThreads from './data/threads.json';
+import { db } from './db';
 
 export const handlers = [
   // GET /api/posts?page=1&limit=10&s=lorem
@@ -11,18 +9,31 @@ export const handlers = [
     const s = req.url.searchParams.get('s') ?? '';
 
     // Tìm các posts có content chứa s
-    const searchPosts = mockPosts.posts.filter((post) =>
-      post.content.toLowerCase().includes(s.toLowerCase())
-    );
+    const searchPosts = db.posts.findMany({
+      where: {
+        content: {
+          contains: s,
+        },
+      },
+    });
 
     // Tìm các threads có title chứa s
-    const searchThreads = mockThreads.threads.filter((thread) =>
-      thread.title.toLowerCase().includes(s.toLowerCase())
-    );
+    const searchThreads = db.threads.findMany({
+      where: {
+        title: {
+          contains: s,
+        },
+      },
+    });
+
     // Lấy ra các posts có parentId là id của các threads tìm được
-    const searchPostsByThreads = mockPosts.posts.filter((post) =>
-      searchThreads.map((thread) => thread.id).includes(post.parentId)
-    );
+    const searchPostsByThreads = db.posts.findMany({
+      where: {
+        parentId: {
+          in: searchThreads.map((thread) => thread.id),
+        },
+      },
+    });
 
     // Gộp các posts tìm được thành 1 mảng
     const searchPostsResult = [...searchPosts, ...searchPostsByThreads];
@@ -35,17 +46,26 @@ export const handlers = [
 
     // Lấy thông tin thread cho từng post
     posts.forEach((post: any) => {
-      const thread = mockThreads.threads.find(
-        (thread) => thread.id === post.parentId
-      );
-      post.thread = thread;
+      const thread = db.threads.findFirst({
+        where: {
+          id: {
+            equals: post.parentId,
+          },
+        },
+      });
 
       // Lấy thông tin category cho từng thread
       if (thread) {
-        const category = mockCategories.categories.find(
-          (category) => category.id === thread.parentId
-        );
-        (thread as any).category = category;
+        post.thread = thread;
+
+        const category = db.categories.findFirst({
+          where: {
+            id: {
+              equals: thread.parentId,
+            },
+          },
+        });
+        if (category) (thread as any).category = category;
       }
     });
 

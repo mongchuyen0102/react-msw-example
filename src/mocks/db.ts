@@ -3,54 +3,54 @@ import { factory, oneOf, primaryKey } from '@mswjs/data';
 
 export const db = factory({
   user: {
-    id: primaryKey(faker.datatype.number),
-    avatar: faker.image.avatar,
-    name: faker.name.fullName,
-    mail: faker.internet.email,
+    id: primaryKey(String),
+    avatar: String,
+    name: String,
+    mail: String,
   },
 
   categories: {
-    id: primaryKey(faker.datatype.number),
-    title: faker.name.jobTitle,
+    id: primaryKey(String),
+    title: String,
     author: oneOf('user'),
     createdAt: () =>
       faker.date.between('2023-01-01', '2023-04-30').toISOString(),
     updatedBy: oneOf('user'),
     updatedAt: () =>
       faker.date.between('2023-01-01', '2023-04-30').toISOString(),
-    totalThreads: () => faker.datatype.number(1000),
-    totalMessages: () => faker.datatype.number(1000),
+    threads: Array,
+    totalThreads: Number,
+    totalMessages: Number,
     parentId: String,
   },
 
   threads: {
-    id: primaryKey(faker.datatype.number),
-    title: faker.lorem.sentence,
+    id: primaryKey(String),
+    title: String,
+    posts: Array,
     author: oneOf('user'),
     createdAt: () =>
       faker.date.between('2023-01-01', '2023-04-30').toISOString(),
     updatedBy: oneOf('user'),
     updatedAt: () =>
       faker.date.between('2023-01-01', '2023-04-30').toISOString(),
-    totalViews: () => faker.datatype.number(1000),
-    totalReplies: () => faker.datatype.number(1000),
-    parentId: Number,
-    category: oneOf('categories'),
+    totalViews: Number,
+    totalReplies: Number,
+    parentId: String,
   },
 
   posts: {
-    id: primaryKey(faker.datatype.number),
-    content: faker.lorem.paragraph,
+    id: primaryKey(String),
+    content: String,
     option: Array,
-    status: faker.datatype.boolean,
+    status: Array,
     author: oneOf('user'),
     createdAt: () =>
       faker.date.between('2023-01-01', '2023-04-30').toISOString(),
     updatedBy: oneOf('user'),
     updatedAt: () =>
       faker.date.between('2023-01-01', '2023-04-30').toISOString(),
-    parentId: Number,
-    thread: oneOf('threads'),
+    parentId: String,
   },
 });
 
@@ -58,7 +58,12 @@ export const createDb = () => {
   // create 5 users
   let users = [];
   for (let i = 0; i < 5; i++) {
-    const user = db.user.create();
+    const user = db.user.create({
+      id: `${faker.datatype.number()}`,
+      avatar: faker.image.avatar(),
+      name: faker.name.fullName(),
+      mail: faker.internet.email(),
+    });
     users.push(user);
   }
 
@@ -68,8 +73,12 @@ export const createDb = () => {
     const randomUser = users[Math.floor(Math.random() * users.length)];
 
     const category = db.categories.create({
+      id: `${faker.datatype.number()}`,
+      title: faker.name.jobTitle(),
       author: randomUser,
       updatedBy: randomUser,
+      totalThreads: faker.datatype.number(1000),
+      totalMessages: faker.datatype.number(1000),
     });
     categories.push(category);
   }
@@ -82,9 +91,13 @@ export const createDb = () => {
       categories[Math.floor(Math.random() * categories.length)];
 
     const thread = db.threads.create({
+      id: `${faker.datatype.number()}`,
+      title: faker.lorem.sentence(),
       author: randomUser,
       updatedBy: randomUser,
       parentId: randomCategory.id,
+      totalViews: faker.datatype.number(1000),
+      totalReplies: faker.datatype.number(1000),
     });
     threads.push(thread);
   }
@@ -96,6 +109,8 @@ export const createDb = () => {
     const randomThread = threads[Math.floor(Math.random() * threads.length)];
 
     const post = db.posts.create({
+      id: `${faker.datatype.number()}`,
+      content: faker.lorem.paragraph(),
       author: randomUser,
       updatedBy: randomUser,
       parentId: randomThread.id,
