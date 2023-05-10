@@ -18,33 +18,30 @@ export const App = () => {
   const page = +(searchParams.get('page') || 1);
   const limit = +(searchParams.get('limit') || 10);
   const search = searchParams.get('s') || '';
-  const type = searchParams.get('t') || '';
 
   const [posts, setPosts] = useState<Post[]>([]);
   const [totalPosts, setTotalPosts] = useState(0);
   const [searchQuery, setSearchQuery] = useState(search);
-  const [typeQuery, setTypeQuery] = useState(type);
   const [currentPage, setCurrentPage] = useState(page);
   const [perPage, setPerPage] = useState(limit);
 
   useEffect(() => {
     fetchPosts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPage, perPage, searchQuery, typeQuery]);
+  }, [currentPage, perPage, searchQuery]);
 
   useEffect(() => {
     const newSearchParams = new URLSearchParams();
     newSearchParams.set('page', currentPage.toString());
     newSearchParams.set('limit', perPage.toString());
     newSearchParams.set('search', searchQuery);
-    newSearchParams.set('type', typeQuery);
 
     navigate(`?${newSearchParams.toString()}`);
-  }, [currentPage, perPage, searchQuery, typeQuery, navigate]);
+  }, [currentPage, perPage, searchQuery, navigate]);
 
   const fetchPosts = async () => {
     const response = await fetch(
-      `/api/posts?page=${currentPage}&limit=${perPage}&s=${searchQuery}&t=${typeQuery}`
+      `/api/posts?page=${currentPage}&limit=${perPage}&s=${searchQuery}`
     );
     const data = await response.json();
     setPosts(data.posts);
@@ -53,10 +50,6 @@ export const App = () => {
 
   const handleSearch = (event: any) => {
     setSearchQuery(event.target.value);
-  };
-
-  const handleType = (event: any) => {
-    setTypeQuery(event.target.value);
   };
 
   const handlePagination = (page: number) => {
